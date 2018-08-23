@@ -35,12 +35,41 @@
     </tr>
 </table>
 
+## k8s服务列表
+### master服务列表:
+```
+systemctl status kube-apiserver
+systemctl status kube-controller-manager
+systemctl status kube-scheduler
+systemctl status flannel
+systemctl status docker
+
+systemctl restart kube-apiserver
+systemctl restart kube-controller-manager
+systemctl restart kube-scheduler
+systemctl restart flannel
+systemctl restart docker
+```
+
+### node服务列表:
+```
+systemctl status kubelet
+systemctl status kube-proxy
+systemctl status flannel
+systemctl status docker
+
+systemctl restart kubelet
+systemctl restart kube-proxy
+systemctl restart flannel
+systemctl restart docker
+```
+
 ## 1. 系统初始化 (这里不在演示操作):
-1. 规范主机名；
-2. 设置/etc/hosts主机名内部解析；
-3. 关闭SELinux和防火墙；
-4. ssh密钥连接；
-5. 设置时间同步；
+1. 规范主机名;
+2. 设置/etc/hosts主机名内部解析;
+3. 关闭SELinux和防火墙;
+4. ssh密钥连接;
+5. 设置时间同步;
 
 ### 1.1 机器分配情况:
 ```
