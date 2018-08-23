@@ -10,7 +10,7 @@
 
 
 ## 1. 部署NFS共享存储 (NFS服务端和客户端操作):
-
+- 备份中心: 10.11.40.54
 ### PS: NFS客户端不启动服务;
 ```
 yum install nfs-utils rpcbind -y
