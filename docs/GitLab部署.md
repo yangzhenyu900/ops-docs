@@ -74,5 +74,48 @@ user:root
 pass:登录强制设置密码
 
 ```
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/login.png)
+![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/login-1.png)
+![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/login-2.png)
 
+## 3. GitLab界面设置:
+#### 关闭用户注册功能,GitLab对内服务,不需要提供注册,管理员开户:
+![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/close-registration-1.png)
+![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/close-registration-2.png)
+![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/close-registration-3.png)
+
+## 4. GitLab备份恢复:
+### 4.1 备份:
+#### 默认备份位置: /var/opt/gitlab/backups
+```
+[root@gitlab ~]# cat <<EOF>>/var/job/tools-gitlab-backup.sh
+#!/bin/bash
+
+/usr/bin/gitlab-rake gitlab:backup:create
+EOF
+
+Crontab设置:
+#tools gitlab backup
+0 2 * * * /var/job/tools-gitlab-backup.sh
+
+[root@git ~]# ll /var/opt/gitlab/backups/
+total 21167444
+-rw------- 1 git git 3089346560 Aug 17 02:02 1534442496_2018_08_17_10.7.3_gitlab_backup.tar
+-rw------- 1 git git 3096524800 Aug 18 02:02 1534528897_2018_08_18_10.7.3_gitlab_backup.tar
+-rw------- 1 git git 3097497600 Aug 19 02:02 1534615300_2018_08_19_10.7.3_gitlab_backup.tar
+-rw------- 1 git git 3097395200 Aug 20 02:02 1534701699_2018_08_20_10.7.3_gitlab_backup.tar
+-rw------- 1 git git 3097774080 Aug 21 02:02 1534788096_2018_08_21_10.7.3_gitlab_backup.tar
+-rw------- 1 git git 3098337280 Aug 22 02:02 1534874498_2018_08_22_10.7.3_gitlab_backup.tar
+-rw------- 1 git git 3098572800 Aug 23 02:02 1534960890_2018_08_23_10.7.3_gitlab_backup.tar
+[root@git ~]# 
+```
+
+### 4.2 恢复:
+```
+[root@gitlab ~]# cd /var/opt/gitlab/backups
+[root@gitlab ~]# /usr/bin/gitlab-rake gitlab:backup:restore BACKUP=1532328982_2018_07_23_10.7.3
+```
+
+### 4.3 异机灾备:
+#### 方案: 使用NFS挂载备份路径,GitLab备份脚本备份的时候就直接备份到异机;
+
+## 备份完成后登录进行验证即可;
