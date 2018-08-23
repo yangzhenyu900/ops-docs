@@ -73,6 +73,6 @@ http://10.11.26.56
 user:root
 pass:登录强制设置密码
 
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/login.png)
+  ![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/login.png)
 
 ```
