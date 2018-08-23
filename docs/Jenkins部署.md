@@ -107,13 +107,18 @@ PS: smtp="mail.shejiyun.corp.rs.com" smtp-auth-user="shejiyun" smtp-auth-passwor
 ### 2.4 多人邮箱通知设置:
 ![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/msg-set-3.png)
 
+```
 PS: 图1和2,两点邮箱地址必须一样,下面是构建成功通知信息;
+```
 
-构建通知信息如下:
-标题：
+#### 构建通知信息如下:
+- 标题:
+```
 【构建通知】：$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!
+```
 
-正文：
+- 正文:
+```
 <html>    
 <head>    
 <meta charset="UTF-8">    
@@ -148,7 +153,7 @@ PS: 图1和2,两点邮箱地址必须一样,下面是构建成功通知信息;
     </table>    
 </body>    
 </html>
-
+```
 
 效果如下:
 ![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/msg-set-4.png)
