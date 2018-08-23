@@ -110,12 +110,53 @@ total 21167444
 ```
 
 ### 4.2 恢复:
+#### PS: 要注意版本问题,版本不一致会导致恢复失败;
 ```
 [root@gitlab ~]# cd /var/opt/gitlab/backups
 [root@gitlab ~]# /usr/bin/gitlab-rake gitlab:backup:restore BACKUP=1532328982_2018_07_23_10.7.3
 ```
 
 ### 4.3 异机灾备:
-#### 方案: 使用NFS挂载备份路径,GitLab备份脚本备份的时候就直接备份到异机;
+#### 4.3.1 异机灾备方案:
+```
+方案: 使用NFS共享存储挂载备份路径,GitLab备份脚本备份的时候就直接备份到异机;
+配置:
+- 配置NFS共享存储,NFS服务器:10.11.40.54;
+- 挂载NFS共享目录到备份路径;
+
+[root@git ~]# cat /etc/fstab 
+
+#
+# /etc/fstab
+# Created by anaconda on Mon May 14 13:58:37 2018
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/centos-root /                       xfs     defaults        0 0
+UUID=e71f0f8f-14da-4116-ba54-9dcb0ad3ac35 /boot                   xfs     defaults        0 0
+##Backup to GitLab NFS
+10.11.40.54:/data/backups/codebackup	/var/opt/gitlab/backups	nfs4	defaults	0	0
+[root@git ~]# 
+
+[root@git ~]# mount -a
+
+[root@git ~]# df -hT
+Filesystem                           Type      Size  Used Avail Use% Mounted on
+/dev/mapper/centos-root              xfs       150G   17G  134G  12% /
+devtmpfs                             devtmpfs  3.8G     0  3.8G   0% /dev
+tmpfs                                tmpfs     3.8G  4.0K  3.8G   1% /dev/shm
+tmpfs                                tmpfs     3.8G  361M  3.4G  10% /run
+tmpfs                                tmpfs     3.8G     0  3.8G   0% /sys/fs/cgroup
+/dev/vda1                            xfs       197M  121M   77M  62% /boot
+tmpfs                                tmpfs     582M     0  582M   0% /run/user/1000
+10.11.40.54:/data/bakcups/codebackup nfs4      1.6T  330G  1.3T  21% /var/opt/gitlab/backups
+[root@git ~]# 
+```
+
+#### 4.3.2 NFS共享存储:
+```
+部署移步: [NFS共享存储部署文档](docs/NFS共享存储.md);
+```
 
 ## 备份完成后登录进行验证即可;
