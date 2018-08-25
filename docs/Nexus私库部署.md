@@ -66,13 +66,13 @@ admin
 admin123
 
 ```
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/set-1.png)
+![](images/Nexus/set-1.png)
 
 ## 2. Nexus登录界面设置:
 
 ### 2.1 登录Nexus:
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/set-2.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/set-3.png)
+![](images/Nexus/set-2.png)
+![](images/Nexus/set-3.png)
 
 ### 2.2 创建私有仓库:
 
@@ -83,45 +83,45 @@ admin123
 - Proxy_URL: http://maven.aliyun.com/nexus/content/repositories/central/
 - URL: http://10.11.26.60:8081/repository/maven-public/
 
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/maven-set-1.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/maven-set-2.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/maven-set-3.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/maven-set-4.png)
+![](images/Nexus/maven-set-1.png)
+![](images/Nexus/maven-set-2.png)
+![](images/Nexus/maven-set-3.png)
+![](images/Nexus/maven-set-4.png)
 
 #### 2.2.2 Node.Js私有仓库:
 - 流程: npm-proxy + npm-hosted = npm
 - Proxy_URL: https://registry.npm.taobao.org
 - URL: http://10.11.26.60:8081/repository/npm/
 
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/init-set.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/npm-set-1.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/npm-set-2.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/npm-set-3.png)
+![](images/Nexus/init-set.png)
+![](images/Nexus/npm-set-1.png)
+![](images/Nexus/npm-set-2.png)
+![](images/Nexus/npm-set-3.png)
 
 #### 2.2.3 Docker私有仓库:
 - 流程: docker-hosted
 - Docker加速器: https://7caofi77.mirror.aliyuncs.com
 
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/init-set.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/docker-set.png)
+![](images/Nexus/init-set.png)
+![](images/Nexus/docker-set.png)
 
 #### 2.2.4 PyPi私有仓库:
 - 流程: pypi-proxy + pypi-hosted = pypi
 - Proxy_URL: http://mirrors.aliyun.com/pypi
 - URL: http://10.11.26.60:8081/repository/pypi/
 
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/init-set.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/pypi-set-1.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/pypi-set-2.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/pypi-set-3.png)
+![](images/Nexus/init-set.png)
+![](images/Nexus/pypi-set-1.png)
+![](images/Nexus/pypi-set-2.png)
+![](images/Nexus/pypi-set-3.png)
 
 #### 2.2.5 RubyGems私有仓库:
 - 流程: rubygems-proxy + rubygems-hosted = rubygems
 - Proxy_URL: https://ruby.taobao.org/
 - URL: http://10.11.26.60:8081/repository/rubygems/
 
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/init-set.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/rubygems-set-1.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/rubygems-set-2.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Nexus/rubygems-set-3.png)
+![](images/Nexus/init-set.png)
+![](images/Nexus/rubygems-set-1.png)
+![](images/Nexus/rubygems-set-2.png)
+![](images/Nexus/rubygems-set-3.png)
 

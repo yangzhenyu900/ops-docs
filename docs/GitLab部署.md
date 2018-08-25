@@ -75,13 +75,13 @@ pass:登录强制设置密码
 
 ```
 ![](images/GitLab/login-1.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/login-2.png)
+![](images/GitLab/login-2.png)
 
 ## 3. GitLab界面设置:
 #### 关闭用户注册功能,GitLab对内服务,不需要提供注册,管理员开户:
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/close-registration-1.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/close-registration-2.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/close-registration-3.png)
+![](images/GitLab/close-registration-1.png)
+![](images/GitLab/close-registration-2.png)
+![](images/GitLab/close-registration-3.png)
 
 ## 4. GitLab备份恢复:
 ### 4.1 备份:

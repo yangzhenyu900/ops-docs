@@ -48,17 +48,17 @@ http://10.11.26.200:8080
 
 ### 1.3 Jenkins登录界面设置:
 #### 根据界面提示,解锁Jenkins:
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/set-1.png)
+![](images/Jenkins/set-1.png)
 
 [root@jenkins ~]# cat /var/lib/jenkins/secrets/initialAdminPassword		\\默认密码存放位置,密码随机生成;
 667432431e5c484fa5c2fd864e093075
 
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/set-2.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/set-3.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/set-4.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/set-5.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/set-6.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/set-7.png)
+![](images/Jenkins/set-2.png)
+![](images/Jenkins/set-3.png)
+![](images/Jenkins/set-4.png)
+![](images/Jenkins/set-5.png)
+![](images/Jenkins/set-6.png)
+![](images/Jenkins/set-7.png)
 
 ### 1.4 jenkins插件代理设置:
 #### 插件管理代理设置:
@@ -98,14 +98,14 @@ PS: smtp="mail.shejiyun.corp.rs.com" smtp-auth-user="shejiyun" smtp-auth-passwor
 ```
 [root@jenkins ~]# echo "This is a test mail."|mail -s "Test" li.zhiqiang@chinaredstar.com
 ```
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/msg-test.png)
+![](images/Jenkins/msg-test.png)
 
 ### 2.3 设置Jenkins:
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/msg-set-1.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/msg-set-2.png)
+![](images/Jenkins/msg-set-1.png)
+![](images/Jenkins/msg-set-2.png)
 
 ### 2.4 多人邮箱通知设置:
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/msg-set-3.png)
+![](images/Jenkins/msg-set-3.png)
 
 ```
 PS: 图1和2,两点邮箱地址必须一样,下面是构建成功通知信息;
@@ -156,24 +156,24 @@ PS: 图1和2,两点邮箱地址必须一样,下面是构建成功通知信息;
 ```
 
 效果如下:
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/msg-set-4.png)
+![](images/Jenkins/msg-set-4.png)
 
 ### 2.5 单人邮箱通知设置:
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/msg-set-5.png)
+![](images/Jenkins/msg-set-5.png)
 
 
 ## 3. Jenkins服务发布配置:
 
 ### 3.1 创建项目:
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/job-set-1.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/job-set-2.png)
+![](images/Jenkins/job-set-1.png)
+![](images/Jenkins/job-set-2.png)
 
 ### 3.2 创建项目用户分配项目权限:
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/adduser-set-1.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/adduser-set-2.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/adduser-set-3.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/adduser-set-4.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/adduser-set-5.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/adduser-set-6.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/adduser-set-7.png)
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/Jenkins/adduser-set-8.png)
+![](images/Jenkins/adduser-set-1.png)
+![](images/Jenkins/adduser-set-2.png)
+![](images/Jenkins/adduser-set-3.png)
+![](images/Jenkins/adduser-set-4.png)
+![](images/Jenkins/adduser-set-5.png)
+![](images/Jenkins/adduser-set-6.png)
+![](images/Jenkins/adduser-set-7.png)
+![](images/Jenkins/adduser-set-8.png)
