@@ -74,7 +74,7 @@ user:root
 pass:登录强制设置密码
 
 ```
-![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/login-1.png)
+![](images/GitLab/login-1.png)
 ![](https://github.com/DevOps-m/ops-docs/blob/master/docs/images/GitLab/login-2.png)
 
 ## 3. GitLab界面设置:
